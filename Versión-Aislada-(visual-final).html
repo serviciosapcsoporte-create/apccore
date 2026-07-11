@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>APC CORE — Automatización · Infraestructura · Flujos de Datos</title>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark}
+body{font-family:Inter,system-ui;background:#080C18;color:#E2E8F0}
+.mono{font-family:"JetBrains Mono",monospace}
+.grid-bg{background-image:linear-gradient(to right,rgba(34,211,238,0.07) 1px,transparent 1px),linear-gradient(to bottom,rgba(34,211,238,0.07) 1px,transparent 1px);background-size:40px 40px}
+</style>
+</head>
+<body class="antialiased overflow-x-hidden selection:bg-cyan-400/30">
+<!-- HEADER -->
+<header class="sticky top-0 z-50 backdrop-blur-xl bg-[#080C18]/80 border-b border-[#1E2A4A]">
+  <div class="mx-auto max-w-7xl px-6 h-[70px] flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div class="size-9 rounded-xl bg-gradient-to-br from-cyan-400 to-violet-500 grid place-items-center font-black text-black shadow-lg shadow-cyan-500/20">C</div>
+      <div class="leading-tight">
+        <div class="font-extrabold tracking-tight text-white">APC CORE</div>
+        <div class="text-[10px] tracking-[0.22em] text-cyan-300/70">AUTOMATIZACIÓN</div>
+      </div>
+    </div>
+    <nav class="hidden md:flex items-center gap-1">
+      <a href="#hero" class="px-3.5 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-[#111A2E]">Inicio</a>
+      <a href="#servicios" class="px-3.5 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-[#111A2E]">Servicios</a>
+      <a href="#beneficios" class="px-3.5 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-[#111A2E]">Beneficios</a>
+      <a href="#publico" class="px-3.5 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-[#111A2E]">Público</a>
+      <a href="#contacto" class="px-3.5 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-[#111A2E]">Contacto</a>
+      <a href="#contacto" class="ml-2 px-4 py-2 rounded-xl bg-cyan-400 text-[#080C18] text-sm font-semibold hover:bg-cyan-300 shadow shadow-cyan-500/20">Cotizar</a>
+    </nav>
+    <button id="mb" class="md:hidden size-10 grid place-items-center rounded-xl bg-[#111A2E] border border-[#1E2A4A]"><i data-lucide="menu" class="w-5 h-5 text-slate-300"></i></button>
+  </div>
+  <div id="mm" class="hidden md:hidden border-t border-[#1E2A4A] bg-[#080C18] px-4 py-3 space-y-1">
+    <a href="#hero" class="block px-3 py-2.5 rounded-lg hover:bg-[#111A2E]">Inicio</a>
+    <a href="#servicios" class="block px-3 py-2.5 rounded-lg hover:bg-[#111A2E]">Servicios</a>
+    <a href="#beneficios" class="block px-3 py-2.5 rounded-lg hover:bg-[#111A2E]">Beneficios</a>
+    <a href="#publico" class="block px-3 py-2.5 rounded-lg hover:bg-[#111A2E]">Público Objetivo</a>
+    <a href="#contacto" class="block mt-2 text-center px-4 py-3 rounded-xl bg-cyan-400 text-black font-semibold">Contactar</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="hero" class="relative min-h-[88vh] flex items-center overflow-hidden">
+  <div class="absolute inset-0 bg-[#080C18]"></div>
+  <div class="absolute inset-0 grid-bg opacity-[0.6]"></div>
+  <div class="absolute -top-32 -right-32 w-[700px] h-[700px] bg-cyan-500/15 rounded-full blur-[140px]"></div>
+  <div class="absolute -bottom-40 -left-40 w-[600px] h-[600px] bg-violet-600/15 rounded-full blur-[130px]"></div>
+  <div class="relative mx-auto max-w-7xl px-6 py-20 w-full grid lg:grid-cols-2 gap-14 items-center">
+    <div>
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#111A2E] border border-[#1E2A4A] text-[11px] tracking-widest text-cyan-300"><span class="size-1.5 rounded-full bg-emerald-400 animate-pulse"></span> INFRAESTRUCTURA • n8n • 99.9% UPTIME</div>
+      <h1 class="mt-6 text-[38px] sm:text-6xl font-black leading-[0.9] tracking-tight text-white">APC CORE —<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-violet-400">Automatización</span><br>· Infraestructura · Flujos de Datos</h1>
+      <p class="mt-6 text-[18px] leading-relaxed text-slate-400 max-w-xl">Vende: <b class="text-slate-100 font-semibold">Orden, respuesta automática, captación, control de acceso, GPS.</b> La capa operativa que convierte caos en sistema.</p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="#servicios" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-cyan-400 text-[#080C18] font-semibold hover:bg-cyan-300 shadow-lg shadow-cyan-500/20"><i data-lucide="layers" class="w-4 h-4"></i> Ver servicios</a>
+        <a href="https://wa.me/573001234567" target="_blank" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#111A2E] border border-[#1E2A4A] hover:bg-[#162040] text-white font-medium"><i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp</a>
+      </div>
+      <div class="mt-10 grid grid-cols-3 gap-3 max-w-md text-[12px]">
+        <div class="p-3 rounded-xl bg-[#111A2E] border border-[#1E2A4A]"><div class="text-slate-400">Respuesta</div><div class="font-mono font-bold text-cyan-300">&lt; 30min</div></div>
+        <div class="p-3 rounded-xl bg-[#111A2E] border border-[#1E2A4A]"><div class="text-slate-400">Flujos</div><div class="font-mono font-bold text-white">47 activos</div></div>
+        <div class="p-3 rounded-xl bg-[#111A2E] border border-[#1E2A4A]"><div class="text-slate-400">Stack</div><div class="font-mono font-bold text-violet-300">n8n + Sheets</div></div>
+      </div>
+    </div>
+    <div class="relative">
+      <div class="rounded-[28px] border border-[#1E2A4A] bg-[#0F172A]/80 backdrop-blur shadow-2xl overflow-hidden">
+        <div class="h-11 border-b border-[#1E2A4A] flex items-center justify-between px-4 bg-[#0B1220]"><div class="flex items-center gap-2"><span class="size-2.5 rounded-full bg-red-500/70"></span><span class="size-2.5 rounded-full bg-yellow-400/70"></span><span class="size-2.5 rounded-full bg-emerald-400/70"></span><span class="ml-3 text-[11px] mono text-slate-500">core-automation.json</span></div><span class="text-[10px] px-2 py-1 rounded-full bg-cyan-400/10 border border-cyan-400/20 text-cyan-300 mono">LIVE</span></div>
+        <div class="p-6 mono text-[13px] leading-7 text-slate-300">
+          <div class="text-slate-500">// Orquestación APC CORE</div>
+          <div class="mt-3">trigger: <span class="text-cyan-300">gps.geofence_exit</span></div>
+          <div class="ml-4 text-slate-400">vehicle: <span class="text-white">ABC123</span></div>
+          <div class="ml-4">actions:</div>
+          <div class="ml-8 text-violet-300">→ sheets.append_row(PRO-OPS)</div>
+          <div class="ml-8 text-cyan-300">→ whatsapp.send_alert(admin)</div>
+          <div class="ml-8 text-emerald-300">→ relay.cut_engine()</div>
+          <div class="mt-6 p-4 rounded-xl bg-[#080C18] border border-[#1E2A4A]">
+            <div class="flex justify-between text-[11px]"><span class="text-slate-500">LATENCIA</span><span class="text-emerald-400">182ms</span></div>
+            <div class="mt-2 h-1.5 rounded-full bg-[#1E2A4A] overflow-hidden"><div class="h-full w-[92%] bg-gradient-to-r from-cyan-400 to-violet-400"></div></div>
+            <div class="mt-3 text-[11px] text-slate-400">Evento procesado correctamente • Log guardado en Sheets</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="py-24 bg-[#0A1020] border-t border-[#1E2A4A]">
+  <div class="mx-auto max-w-7xl px-6">
+    <div class="flex flex-wrap items-end justify-between gap-6">
+      <div><div class="text-[11px] tracking-[0.2em] text-cyan-300 font-semibold">CATÁLOGO TRANSPARENTE</div><h2 class="mt-3 text-4xl font-black tracking-tight text-white">Nuestros Servicios</h2><p class="mt-2 text-slate-400">Código, cobro, precio COP y público objetivo definidos.</p></div>
+      <div class="text-[12px] px-3 py-1.5 rounded-full bg-[#111A2E] border border-[#1E2A4A] text-slate-400">Facturación: Setup + Mensual / Por evento</div>
+    </div>
+    <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- 6 cards -->
+      <article class="rounded-[20px] border border-[#1E2A4A] bg-[#111A2E] p-6 hover:border-cyan-400/30 hover:-translate-y-1 transition-all">
+        <div class="flex justify-between"><span class="px-2.5 py-1 rounded-full bg-[#0B1220] border border-[#1E2A4A] text-[11px] mono text-cyan-300">APC-SR01</span><span class="text-[11px] px-2.5 py-1 rounded-full bg-[#0B1220] border border-[#1E2A4A] text-slate-400">Por evento / Mensual</span></div>
+        <h3 class="mt-4 font-bold text-lg text-white">Soporte Técnico Remoto</h3>
+        <div class="mt-1 text-2xl font-black text-cyan-300">$80.000 <span class="text-xs font-medium text-slate-500">COP</span></div>
+        <p class="mt-3 text-sm text-slate-400 leading-relaxed">Reconexión remota de cámaras, red o flujos. Diagnóstico seguro en &lt;30 min.</p>
+        <div class="mt-4 text-[12px] text-slate-500 flex items-center gap-1.5"><i data-lucide="users" class="w-3.5 h-3.5"></i> Pymes con sistema instalado</div>
+      </article>
+
+      <article class="rounded-[20px] border border-[#1E2A4A] bg-[#111A2E] p-6 hover:border-cyan-400/30 hover:-translate-y-1 transition-all">
+        <div class="flex justify-between"><span class="px-2.5 py-1 rounded-full bg-[#0B1220] border border-[#1E2A4A] text-[11px] mono text-cyan-300">APC-SF02</span><span class="text-[11px] px-2.5 py-1 rounded-full bg-[#0B1220] border border-[#1E2A4A] text-slate-400">Por visita</span></div>
+        <h3 class="mt-4 font-bold text-lg text-white">Soporte Técnico Físico</h3>
+        <div class="mt-1 text-2xl font-black text-cyan-300">$180.000 <span class="text-xs font-medium text-slate-500">COP / visita</span></div>
+        <p class="mt-3 text-sm text-slate-400 leading-relaxed">Mantenimiento preventivo y correctivo de cámaras, NVR, racks y cableado.</p>
+        <div class="mt-4 text-[12px] text-slate-500 flex items-center gap-1.5"><i data-lucide="wrench" class="w-3.5 h-3.5"></i> Pymes con sistema instalado</div>
+      </article>
+
+      <article class="rounded-[20px] border border-cyan-400/30 bg-gradient-to-b from-cyan-950/20 to-[#111A2E] p-6 shadow-[0_0_0_1px_rgba(34,211,238,0.08)] hover:-translate-y-1 transition-all">
+        <div class="flex justify-between"><span class="px-2.5 py-1 rounded-full bg-cyan-400 text-black text-[11px] mono font-bold">APC-CTRL-03</span><span class="text-[11px] px-2.5 py-1 rounded-full bg-[#0B1220] border border-cyan-400/20 text-cyan-300">Licencia + Instalación</span></div>
+        <h3 class="mt-4 font-bold text-lg text-white">Control de Acceso + Nómina</h3>
+        <div class="mt-1 text-2xl font-black text-cyan-300">$450.000 <span class="text-xs font-medium text-slate-400">/mes + $890k setup</span></div>
+        <p class="mt-3 text-sm text-slate-300 leading-relaxed">Biometría, turnos, horas extra y reporte automático listo para Siigo / contador.</p>
+        <div class="mt-4 text-[12px] text-cyan-200/70 flex items-center gap-1.5"><i data-lucide="shield-check" class="w-3.5 h-3.5"></i> Clínicas, consultorios, pymes con nómina</div>
+        <div class="mt-4 w-full py-2.5 rounded-xl bg-cyan-400 text-black text-center text-sm font-semibold">Más contratado →</div>
+      </article>
+
+      <article class="rounded-[20px] border border-[#1E2A4A] bg-[#111A2E] p-6 hover:border-cyan-400/30 hover:-translate-y-1 transition-all">
+        <div class="flex justify-between"><span class="px-2.5 py-1 rounded-full bg-[#0B1220] border border-[#1E2A4A] text-[11px] mono text-cyan-300">APC-GPS-04</span><span class="text-[11px] px-2.5 py-1 rounded-full bg-[#0B1220] border border-[#1E2A4A] text-slate-400">Por vehículo/mes</span></div>
+        <h3 class="mt-4 font-bold text-lg text-white">GPS Flotas y Telemetría</h3>
+        <div class="mt-1 text-2xl font-black text-cyan-300">$35.000 <span class="text-xs font-medium text-slate-500">COP / veh</span></div>
+        <p class="mt-3 text-sm text-slate-400 leading-relaxed">Rastreo real, geocercas, paro remoto, combustible y hábitos de conducción.</p>
+        <div class="mt-4 text-[12px] text-slate-500 flex items-center gap-1.5"><i data-lucide="truck" class="w-3.5 h-3.5"></i> Flotas y atención logística</div>
+      </article>
+
+      <article class="rounded-[20px] border border-[#1E2A4A] bg-[#111A2E] p-6 hover:border-cyan-400/30 hover:-translate-y-1 transition-all">
+        <div class="flex justify-between"><span class="px-2.5 py-1 rounded-full bg-[#0B1220] border border-[#1E2A4A] text-[11px] mono text-violet-300">APC-AUTO-05</span><span class="text-[11px] px-2.5 py-1 rounded-full bg-[#0B1220] border border-[#1E2A4A] text-slate-400">Setup + mensual</span></div>
+        <h3 class="mt-4 font-bold text-lg text-white">Automatización WhatsApp + Captación</h3>
+        <div class="mt-1 text-2xl font-black text-white">$590k <span class="text-xs font-medium text-slate-400">setup + $290k/mes</span></div>
+        <p class="mt-3 text-sm text-slate-400 leading-relaxed">Bots, respuesta automática, embudo CRM en Sheets y recordatorio de citas.</p>
+        <div class="mt-4 text-[12px] text-slate-500 flex items-center gap-1.5"><i data-lucide="message-circle-heart" class="w-3.5 h-3.5"></i> Atención al cliente y ventas</div>
+      </article>
+
+      <article class="rounded-[20px] border border-[#1E2A4A] bg-[#111A2E] p-6 hover:border-cyan-400/30 hover:-translate-y-1 transition-all">
+        <div class="flex justify-between"><span class="px-2.5 py-1 rounded-full bg-[#0B1220] border border-[#1E2A4A] text-[11px] mono text-violet-300">APC-DATA-06</span><span class="text-[11px] px-2.5 py-1 rounded-full bg-[#0B1220] border border-[#1E2A4A] text-slate-400">Por flujo</span></div>
+        <h3 class="mt-4 font-bold text-lg text-white">Flujos de Datos / Integraciones</h3>
+        <div class="mt-1 text-2xl font-black text-violet-300">$250.000 <span class="text-xs font-medium text-slate-500">COP / flujo</span></div>
+        <p class="mt-3 text-sm text-slate-400 leading-relaxed">Conecta Siigo, Drive, Sheets, WhatsApp vía n8n. Elimina trabajo manual.</p>
+        <div class="mt-4 text-[12px] text-slate-500 flex items-center gap-1.5"><i data-lucide="workflow" class="w-3.5 h-3.5"></i> Pymes con procesos manuales</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFICIOS -->
+<section id="beneficios" class="py-24 bg-[#080C18] border-y border-[#1E2A4A]">
+  <div class="mx-auto max-w-7xl px-6">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-4xl font-black tracking-tight text-white">Beneficios de trabajar con APC CORE</h2>
+      <p class="mt-3 text-slate-400">No vendemos equipos. Instalamos orden.</p>
+    </div>
+    <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="p-6 rounded-2xl bg-[#111A2E] border border-[#1E2A4A]"><div class="size-11 rounded-xl bg-[#0B1220] border border-[#1E2A4A] grid place-items-center"><i data-lucide="layout-dashboard" class="w-5 h-5 text-cyan-300"></i></div><h4 class="mt-4 font-semibold text-white">Orden y organización</h4><p class="mt-2 text-sm text-slate-400 leading-relaxed">Un solo panel. Adiós Excel disperso. Procesos estandarizados.</p></div>
+      <div class="p-6 rounded-2xl bg-[#111A2E] border border-[#1E2A4A]"><div class="size-11 rounded-xl bg-[#0B1220] border border-[#1E2A4A] grid place-items-center"><i data-lucide="zap" class="w-5 h-5 text-cyan-300"></i></div><h4 class="mt-4 font-semibold text-white">Respuesta automática</h4><p class="mt-2 text-sm text-slate-400 leading-relaxed">De horas a segundos. Bots que responden, agendan y hacen seguimiento.</p></div>
+      <div class="p-6 rounded-2xl bg-[#111A2E] border border-[#1E2A4A]"><div class="size-11 rounded-xl bg-[#0B1220] border border-[#1E2A4A] grid place-items-center"><i data-lucide="shield-check" class="w-5 h-5 text-violet-300"></i></div><h4 class="mt-4 font-semibold text-white">Captación y control de acceso</h4><p class="mt-2 text-sm text-slate-400 leading-relaxed">Más leads convertidos, menos ausentismo, acceso biométrico real.</p></div>
+      <div class="p-6 rounded-2xl bg-[#111A2E] border border-[#1E2A4A]"><div class="size-11 rounded-xl bg-[#0B1220] border border-[#1E2A4A] grid place-items-center"><i data-lucide="map-pinned" class="w-5 h-5 text-cyan-300"></i></div><h4 class="mt-4 font-semibold text-white">GPS y flujos de datos</h4><p class="mt-2 text-sm text-slate-400 leading-relaxed">Visibilidad total de flota y datos conectados vía n8n a Sheets.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICO -->
+<section id="publico" class="py-24 bg-[#0A1020]">
+  <div class="mx-auto max-w-7xl px-6">
+    <h2 class="text-3xl font-black tracking-tight text-white text-center">Nuestro Público Objetivo</h2>
+    <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="p-6 rounded-2xl bg-[#111A2E] border border-[#1E2A4A] text-center"><div class="mx-auto size-12 rounded-xl bg-[#0B1220] border border-[#1E2A4A] grid place-items-center"><i data-lucide="heart-pulse" class="w-6 h-6 text-cyan-300"></i></div><h4 class="mt-4 font-semibold text-white">Clínicas</h4><p class="mt-2 text-sm text-slate-400">Control turnos, nómina y recordatorio citas. Evita no-shows.</p></div>
+      <div class="p-6 rounded-2xl bg-[#111A2E] border border-[#1E2A4A] text-center"><div class="mx-auto size-12 rounded-xl bg-[#0B1220] border border-[#1E2A4A] grid place-items-center"><i data-lucide="stethoscope" class="w-6 h-6 text-violet-300"></i></div><h4 class="mt-4 font-semibold text-white">Consultorios</h4><p class="mt-2 text-sm text-slate-400">Agenda automatizada y captación por WhatsApp.</p></div>
+      <div class="p-6 rounded-2xl bg-[#111A2E] border border-[#1E2A4A] text-center"><div class="mx-auto size-12 rounded-xl bg-[#0B1220] border border-[#1E2A4A] grid place-items-center"><i data-lucide="users-round" class="w-6 h-6 text-cyan-300"></i></div><h4 class="mt-4 font-semibold text-white">Pymes con nómina</h4><p class="mt-2 text-sm text-slate-400">5 a 80 empleados. Horas extra calculadas automáticamente.</p></div>
+      <div class="p-6 rounded-2xl bg-[#111A2E] border border-[#1E2A4A] text-center"><div class="mx-auto size-12 rounded-xl bg-[#0B1220] border border-[#1E2A4A] grid place-items-center"><i data-lucide="truck" class="w-6 h-6 text-cyan-300"></i></div><h4 class="mt-4 font-semibold text-white">Flotas y atención</h4><p class="mt-2 text-sm text-slate-400">GPS, geocercas y embudo de ventas 24/7 sin operario.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="py-24 bg-[#080C18] border-t border-[#1E2A4A]">
+  <div class="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-12">
+    <div>
+      <div class="text-[11px] tracking-[0.2em] text-cyan-300 font-semibold">CONTACTO</div>
+      <h2 class="mt-3 text-4xl font-black tracking-tight text-white">Contáctanos</h2>
+      <p class="mt-3 text-slate-400">Te responde automatización en &lt;15 min. Luego humano si hace falta.</p>
+      <form id="f" class="mt-8 space-y-4">
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div><label class="text-xs text-slate-400">Nombre</label><input required name="nombre" placeholder="Tu nombre" class="mt-1 w-full px-4 py-3 rounded-xl bg-[#111A2E] border border-[#1E2A4A] focus:border-cyan-400/50 outline-none text-white"></div>
+          <div><label class="text-xs text-slate-400">Correo electrónico</label><input required type="email" placeholder="correo@empresa.com" class="mt-1 w-full px-4 py-3 rounded-xl bg-[#111A2E] border border-[#1E2A4A] focus:border-cyan-400/50 outline-none text-white"></div>
+        </div>
+        <div><label class="text-xs text-slate-400">Mensaje</label><textarea required rows="4" placeholder="Cuéntanos tu necesidad..." class="mt-1 w-full px-4 py-3 rounded-xl bg-[#111A2E] border border-[#1E2A4A] focus:border-cyan-400/50 outline-none text-white"></textarea></div>
+        <button class="w-full py-3.5 rounded-xl bg-cyan-400 text-black font-semibold hover:bg-cyan-300 flex items-center justify-center gap-2"><i data-lucide="send" class="w-4 h-4"></i> Enviar mensaje</button>
+        <div id="ok" class="hidden p-3 rounded-xl bg-emerald-950/40 border border-emerald-800 text-emerald-300 text-sm text-center">✅ Mensaje recibido — flujo n8n disparado, te contactamos enseguida.</div>
+      </form>
+    </div>
+    <div class="space-y-6">
+      <div class="rounded-2xl border border-[#1E2A4A] bg-[#111A2E] p-6">
+        <h4 class="font-semibold text-white">Información</h4>
+        <div class="mt-5 space-y-4 text-sm text-slate-300">
+          <div class="flex gap-3"><i data-lucide="map-pin" class="w-4 h-4 text-cyan-300 mt-0.5"></i> Puente Aranda, Bogotá D.C. — Calle 13 # 65-21</div>
+          <div class="flex gap-3"><i data-lucide="mail" class="w-4 h-4 text-cyan-300 mt-0.5"></i> info@apccore.co</div>
+          <div class="flex gap-3"><i data-lucide="phone" class="w-4 h-4 text-cyan-300 mt-0.5"></i> +57 312 345 6789</div>
+        </div>
+        <div class="mt-6 flex flex-wrap gap-2 text-[11px] mono"><span class="px-2 py-1 rounded-full bg-[#0B1220] border border-[#1E2A4A] text-slate-400">FastAPI :5680</span><span class="px-2 py-1 rounded-full bg-[#0B1220] border border-[#1E2A4A] text-cyan-300">n8n :5678</span><span class="px-2 py-1 rounded-full bg-[#0B1220] border border-[#1E2A4A] text-violet-300">Groq LLaMA 3.3</span></div>
+      </div>
+      <div class="h-[260px] rounded-2xl border border-[#1E2A4A] bg-[#111A2E] grid place-items-center text-slate-500 text-sm text-center">Mapa Puente Aranda<br><span class="text-xs">Google Maps iframe en producción</span></div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-[#050914] border-t border-[#1E2A4A] py-10">
+  <div class="mx-auto max-w-7xl px-6 flex flex-col md:flex-row justify-between gap-4 text-[12px] text-slate-500">
+    <div>© 2026 APC CORE — Todos los derechos reservados.</div>
+    <div>Infraestructura • Automatización • Datos — <span class="text-cyan-300">Servicios APC</span></div>
+  </div>
+</footer>
+
+<script>
+lucide.createIcons();
+const b=document.getElementById('mb'), m=document.getElementById('mm'); b.onclick=()=>m.classList.toggle('hidden');
+document.getElementById('f').onsubmit=e=>{e.preventDefault();document.getElementById('ok').classList.remove('hidden');e.target.reset();setTimeout(()=>document.getElementById('ok').classList.add('hidden'),4000)}
+</script>
+</body>
+</html>
