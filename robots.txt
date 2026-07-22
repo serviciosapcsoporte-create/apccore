@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://apccore.co/sitemap.xml
+Sitemap: https://apccore.site/sitemap.xml
