@@ -1,5 +1,6 @@
 :root {
   color-scheme: dark;
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 body {
@@ -13,13 +14,26 @@ body {
   z-index: -1;
   pointer-events: none;
 }
-#videoBg video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+/* Static background. Replaces the 2.3 MB looping video: same dark brand
+   surface, guaranteed text contrast, zero download cost. */
+#bgGradient {
+  background:
+    radial-gradient(760px 520px at 12% 6%, rgba(34, 211, 238, 0.22), transparent 62%),
+    radial-gradient(680px 540px at 88% 94%, rgba(139, 92, 246, 0.20), transparent 62%),
+    #080C18;
 }
-#scrollOverlay {
-  transition: opacity 0.15s linear;
+/* Scroll-linked opacity is written per frame from main.js and must NOT be
+   transitioned — a transition here makes it trail the scrollbar. */
+
+/* Status dot in the hero badge: Tailwind's animate-pulse only blinks opacity,
+   so this adds a real scale pulse (inline elements ignore transform). */
+body span.animate-pulse {
+  display: inline-block;
+  animation: live-pulse 2.4s var(--ease-out) infinite;
+}
+@keyframes live-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.45; transform: scale(0.85); }
 }
 
 .mono {
@@ -31,6 +45,40 @@ body {
     linear-gradient(to right, rgba(34, 211, 238, 0.07) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(34, 211, 238, 0.07) 1px, transparent 1px);
   background-size: 40px 40px;
+}
+
+/* ---------------------------------------------------------------------------
+   Press feedback + named transitions.
+   Every selector here is raised above Tailwind's single-class utilities on
+   purpose: the markup stays untouched, so the stylesheet has to win the
+   specificity fight against `.transition-all` (0,1,0).
+   --------------------------------------------------------------------------- */
+.whatsapp-float,
+header nav a[class],
+#hero a[href^="#"],
+#hero a[href*="wa.me"],
+#contacto a[href^="mailto"],
+#contacto a[href^="tel:"],
+#contacto a[href*="maps.google.com"],
+a.transition-all,
+article.transition-all,
+#mm a {
+  transition-property: transform, opacity, background-color, border-color, color, box-shadow;
+  transition-duration: 150ms;
+  transition-timing-function: var(--ease-out);
+}
+
+.whatsapp-float:active,
+header nav a[class]:active,
+#hero a[href^="#"]:active,
+#hero a[href*="wa.me"]:active,
+#contacto a[href^="mailto"]:active,
+#contacto a[href^="tel:"]:active,
+#contacto a[href*="maps.google.com"]:active,
+a.transition-all:active,
+article.transition-all:active,
+#mm a:active {
+  transform: scale(0.97);
 }
 
 .whatsapp-float {
@@ -46,13 +94,27 @@ body {
   display: grid;
   place-items: center;
   box-shadow: 0 8px 32px rgba(16, 185, 129, 0.3);
-  transition: all 0.2s ease;
 }
 
 .whatsapp-float:hover {
   background: #34d399;
-  transform: scale(1.1);
+  transform: scale(1.05);
   box-shadow: 0 12px 40px rgba(16, 185, 129, 0.4);
+}
+
+/* Service cards: keep the lift, but only for real pointers. Touch fires
+   :hover on tap and never clears it, which left cards stuck 4px up. */
+article.transition-all:hover {
+  translate: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  article.transition-all:hover {
+    transform: translateY(-4px);
+  }
+  article.transition-all:hover:active {
+    transform: translateY(-4px) scale(0.99);
+  }
 }
 
 .card-img {
@@ -70,4 +132,200 @@ body {
   border-radius: 16px;
 }
 
+/* ---------------------------------------------------------------------------
+   Mobile menu — accordion/collapse.
+   `html.js-menu` (added by main.js) lets these rules override the markup's own
+   `.hidden`; without JS the class keeps working exactly as before.
+   Stays in flow, so the page below never shifts.
+   --------------------------------------------------------------------------- */
+html.js-menu #mm {
+  display: block;
+  overflow: hidden;
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  /* the border sits outside the collapsed content box, so collapse it too */
+  border-top-width: 0;
+  opacity: 0;
+  translate: 0 -8px;
+  transition:
+    max-height 140ms var(--ease-out),
+    padding-top 140ms var(--ease-out),
+    padding-bottom 140ms var(--ease-out),
+    opacity 140ms var(--ease-out),
+    translate 140ms var(--ease-out);
+}
 
+html.js-menu #mm.is-open {
+  max-height: 340px;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-top-width: 1px;
+  opacity: 1;
+  translate: 0 0;
+  transition-duration: 200ms;
+  transition-timing-function: var(--ease-out);
+}
+
+@media (min-width: 768px) {
+  html.js-menu #mm {
+    display: none;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Hero orchestration: the flow panel tells a story line by line, then the
+   latency bar fills. No JS, no markup change, and if animations never run the
+   content is still there — the hidden state lives inside the keyframes.
+   --------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: no-preference) {
+  #hero .mono > div {
+    animation: line-in 200ms var(--ease-out) both;
+  }
+  #hero .mono > div:nth-child(1) { animation-delay: 0ms; }
+  #hero .mono > div:nth-child(2) { animation-delay: 40ms; }
+  #hero .mono > div:nth-child(3) { animation-delay: 80ms; }
+  #hero .mono > div:nth-child(4) { animation-delay: 120ms; }
+  #hero .mono > div:nth-child(5) { animation-delay: 160ms; }
+  #hero .mono > div:nth-child(6) { animation-delay: 200ms; }
+  #hero .mono > div:nth-child(7) { animation-delay: 240ms; }
+  #hero .mono > div:nth-child(8) { animation-delay: 280ms; }
+
+  #hero .mono .overflow-hidden > div {
+    animation: bar-reveal 400ms var(--ease-out) both;
+    animation-delay: 480ms;
+  }
+
+  #servicios article.in {
+    animation: card-in 300ms var(--ease-out) both;
+  }
+}
+
+@keyframes line-in {
+  from { opacity: 0; transform: translateY(4px); }
+}
+
+@keyframes bar-reveal {
+  from { clip-path: inset(0 100% 0 0); }
+  to { clip-path: inset(0 8% 0 0); }
+}
+
+@keyframes card-in {
+  from { opacity: 0; transform: translateY(8px); }
+}
+
+/* ---------------------------------------------------------------------------
+   Consent banner — Ley 1581 de 2012 (Colombia).
+   Sits bottom-left so it never collides with the WhatsApp FAB.
+   --------------------------------------------------------------------------- */
+#consentBanner {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  z-index: 60;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid #1E2A4A;
+  background: #0B1220;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+}
+#consentBanner[hidden] {
+  display: none;
+}
+#consentBanner:not([hidden]) {
+  animation: consent-in 200ms var(--ease-out) both;
+}
+@keyframes consent-in {
+  from { opacity: 0; transform: translateY(8px); }
+}
+.consent-text {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #94A3B8;
+}
+.consent-text a {
+  color: #22D3EE;
+  text-decoration: underline;
+}
+.consent-actions {
+  display: flex;
+  gap: 8px;
+}
+.consent-btn {
+  flex: 1;
+  padding: 9px 12px;
+  border-radius: 10px;
+  border: 1px solid #1E2A4A;
+  background: #111A2E;
+  color: #E2E8F0;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    transform 140ms var(--ease-out),
+    background-color 140ms var(--ease-out),
+    border-color 140ms var(--ease-out);
+}
+.consent-btn--primary {
+  background: #22D3EE;
+  border-color: #22D3EE;
+  color: #080C18;
+}
+.consent-btn:active {
+  transform: scale(0.97);
+}
+@media (hover: hover) and (pointer: fine) {
+  .consent-btn:hover {
+    border-color: #22D3EE;
+  }
+  .consent-btn--primary:hover {
+    background: #67E8F9;
+    border-color: #67E8F9;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Reduced motion: gentler, not zero. Opacity and colour feedback stay;
+   movement, the looping video and the pulse stop.
+   --------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  body span.animate-pulse {
+    animation: none;
+    opacity: 1;
+  }
+
+  html.js-menu #mm {
+    transform: none;
+    translate: none;
+    transition-duration: 1ms;
+  }
+
+  .consent-btn:active {
+    transform: none;
+  }
+
+  article.transition-all:hover,
+  article.transition-all:hover:active {
+    transform: none;
+  }
+
+  .whatsapp-float:hover,
+  .whatsapp-float:active,
+  header nav a[class]:active,
+  #hero a[href^="#"]:active,
+  #hero a[href*="wa.me"]:active,
+  #contacto a[href^="mailto"]:active,
+  #contacto a[href^="tel:"]:active,
+  #contacto a[href*="maps.google.com"]:active,
+  a.transition-all:active,
+  article.transition-all:active,
+  #mm a:active {
+    transform: none;
+    opacity: 0.85;
+  }
+}

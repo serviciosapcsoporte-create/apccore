@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es-CO" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,23 +7,37 @@
   <meta name="description" content="Automatiza tus respuestas de WhatsApp con APC CORE en Bogotá. Captación, recordatorios, bots con IA y flujos n8n para clínicas, consultorios, pymes y flotas.">
   <meta property="og:title" content="APC CORE Bogotá — Automatización de WhatsApp para negocios">
   <meta property="og:description" content="Automatización de WhatsApp en Bogotá para negocios. Respuestas automáticas, bots con IA y flujos n8n. Captación, control de acceso y GPS.">
-   <meta property="og:image" content="https://apccore.site/imagenes/hero.webp">
+  <meta property="og:image" content="https://apccore.site/imagenes/hero.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="APC CORE — Automatización de WhatsApp, n8n e infraestructura en Bogotá">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://apccore.site">
+  <meta property="og:site_name" content="APC CORE">
+  <meta property="og:locale" content="es_CO">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="APC CORE Bogotá — Automatización de WhatsApp para negocios">
+  <meta name="twitter:description" content="Captación, recordatorios, bots con IA y flujos n8n para clínicas, consultorios, pymes y flotas en Bogotá.">
+  <meta name="twitter:image" content="https://apccore.site/imagenes/hero.webp">
   <meta name="keywords" content="automatización WhatsApp Bogotá, WhatsApp negocios Bogotá, respuestas automáticas, bots WhatsApp, n8n, control de acceso, GPS flotas, APC CORE">
   <link rel="canonical" href="https://apccore.site">
+  <link rel="icon" href="imagenes/logo.webp" type="image/webp">
+  <link rel="apple-touch-icon" href="imagenes/logo.png">
   <meta name="geo.placename" content="Bogotá">
   <meta name="geo.region" content="CO">
   <meta name="geo.position" content="4.6001461;-74.1330034">
   <meta name="ICBM" content="4.6001461, -74.1330034">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="tailwind.build.css">
   <link rel="stylesheet" href="estilos.css">
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/lucide@1.52.0"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
+  "@id": "https://apccore.site/#negocio",
   "name": "APC CORE",
   "description": "Automatización, infraestructura y flujos de datos en Bogotá",
   "url": "https://apccore.site",
@@ -61,30 +75,143 @@
   "sameAs": [
     "https://www.facebook.com/alejandropiraquiveapc",
     "https://www.instagram.com/serviciosapc"
+  ],
+  "hasOfferCatalog": { "@id": "https://apccore.site/#catalogo" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "OfferCatalog",
+  "@id": "https://apccore.site/#catalogo",
+  "name": "Servicios APC CORE",
+  "inLanguage": "es-CO",
+  "itemListElement": [
+    {
+      "@type": "Offer",
+      "sku": "APC-SR01",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Soporte Técnico Remoto",
+        "serviceType": "Soporte técnico remoto",
+        "description": "Reconexión remota de cámaras, red o flujos. Diagnóstico en menos de 30 minutos.",
+        "provider": { "@id": "https://apccore.site/#negocio" },
+        "areaServed": { "@type": "Place", "name": "Bogotá, Colombia" }
+      },
+      "price": "80000",
+      "priceCurrency": "COP",
+      "priceValidUntil": "2027-03-31",
+      "url": "https://apccore.site/#servicios"
+    },
+    {
+      "@type": "Offer",
+      "sku": "APC-SF02",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Soporte Técnico Físico",
+        "serviceType": "Soporte técnico presencial",
+        "description": "Mantenimiento preventivo y correctivo de cámaras, NVR, racks y cableado.",
+        "provider": { "@id": "https://apccore.site/#negocio" },
+        "areaServed": { "@type": "Place", "name": "Bogotá, Colombia" }
+      },
+      "price": "180000",
+      "priceCurrency": "COP",
+      "priceValidUntil": "2027-03-31",
+      "url": "https://apccore.site/#servicios"
+    },
+    {
+      "@type": "Offer",
+      "sku": "APC-CTRL-03",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Control de Acceso + Nómina",
+        "serviceType": "Control de acceso biométrico",
+        "description": "Biometría, turnos, horas extra y reporte automático listo para Siigo o el contador. $890.000 COP de instalación más $450.000 COP mensuales.",
+        "provider": { "@id": "https://apccore.site/#negocio" },
+        "areaServed": { "@type": "Place", "name": "Bogotá, Colombia" }
+      },
+      "price": "450000",
+      "priceCurrency": "COP",
+      "priceValidUntil": "2027-03-31",
+      "url": "https://apccore.site/#servicios"
+    },
+    {
+      "@type": "Offer",
+      "sku": "APC-GPS-04",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "GPS Flotas y Telemetría",
+        "serviceType": "Rastreo y telemetría vehicular",
+        "description": "Rastreo en tiempo real, geocercas, paro remoto, combustible y hábitos de conducción.",
+        "provider": { "@id": "https://apccore.site/#negocio" },
+        "areaServed": { "@type": "Place", "name": "Bogotá, Colombia" }
+      },
+      "price": "35000",
+      "priceCurrency": "COP",
+      "priceValidUntil": "2027-03-31",
+      "url": "https://apccore.site/#servicios"
+    },
+    {
+      "@type": "Offer",
+      "sku": "APC-AUTO-05",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Automatización WhatsApp + Captación",
+        "serviceType": "Automatización de WhatsApp con IA",
+        "description": "Bots con IA, respuestas automáticas en menos de 30 segundos, embudo CRM en Sheets y recordatorio de citas. $590.000 COP de instalación más $290.000 COP mensuales.",
+        "provider": { "@id": "https://apccore.site/#negocio" },
+        "areaServed": { "@type": "Place", "name": "Bogotá, Colombia" }
+      },
+      "price": "290000",
+      "priceCurrency": "COP",
+      "priceValidUntil": "2027-03-31",
+      "url": "https://apccore.site/#servicios"
+    },
+    {
+      "@type": "Offer",
+      "sku": "APC-DATA-06",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Flujos de Datos / Integraciones",
+        "serviceType": "Integración de sistemas",
+        "description": "Conecta Siigo, Drive, Sheets y WhatsApp mediante n8n. Elimina trabajo manual.",
+        "provider": { "@id": "https://apccore.site/#negocio" },
+        "areaServed": { "@type": "Place", "name": "Bogotá, Colombia" }
+      },
+      "price": "250000",
+      "priceCurrency": "COP",
+      "priceValidUntil": "2027-03-31",
+      "url": "https://apccore.site/#servicios"
+    }
   ]
 }
 </script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EWFDLTCM8R"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-EWFDLTCM8R');
-</script>
+<!-- Google tag (gtag.js) se inyecta desde js/main.js SOLO tras consentimiento.
+     Ley 1581 de 2012 (Colombia): no se carga analítica antes de la aceptación. -->
 </head>
 <body class="antialiased overflow-x-hidden selection:bg-cyan-400/30">
 
-<!-- VIDEO BACKGROUND -->
+<!-- CONSENTIMIENTO (Ley 1581 de 2012 - Colombia) -->
+<div id="consentBanner" class="consent-banner" role="dialog" aria-live="polite" aria-label="Aviso de cookies y datos" hidden>
+  <p class="consent-text">
+    Usamos cookies de analítica para medir el uso del sitio. No cargamos nada hasta que aceptes.
+    <a href="#contacto">Política de datos</a>
+  </p>
+  <div class="consent-actions">
+    <button type="button" id="consentReject" class="consent-btn">Rechazar</button>
+    <button type="button" id="consentAccept" class="consent-btn consent-btn--primary">Aceptar</button>
+  </div>
+</div>
+
+<!-- STATIC BACKGROUND (reemplaza al video de 2,3 MB: mismo lenguaje visual,
+     cero peso de descarga y contraste garantizado) -->
 <div id="videoBg" class="fixed inset-0 w-full h-full overflow-hidden pointer-events-none" style="z-index: -1">
-  <video autoplay muted loop playsinline class="w-full h-full object-cover">
-    <source src="imagenes/Servicios APC.mp4" type="video/mp4">
-  </video>
+  <div id="bgGradient" class="absolute inset-0"></div>
   <div id="scrollOverlay" class="absolute inset-0 bg-[#080C18]" style="opacity: 0.4"></div>
 </div>
 
 <!-- WHATSAPP FLOATING -->
-<a href="https://wa.me/573337450634" target="_blank" class="whatsapp-float" aria-label="WhatsApp APC CORE">
+<a href="https://wa.me/573337450634" target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp APC CORE">
   <i data-lucide="message-circle" class="w-7 h-7"></i>
 </a>
 
@@ -92,7 +219,7 @@
 <header class="sticky top-0 z-50 backdrop-blur-xl bg-[#080C18]/80 border-b border-[#1E2A4A]">
   <div class="mx-auto max-w-7xl px-6 h-[70px] flex items-center justify-between">
     <div class="flex items-center gap-3">
-      <img src="imagenes/logo.webp" alt="APC CORE — Automatización e infraestructura en Bogotá" class="h-10 w-auto">
+      <img src="imagenes/logo.webp" alt="APC CORE — Automatización e infraestructura en Bogotá" class="h-10 w-auto" width="1024" height="1024">
       <div class="leading-tight">
         <div class="font-extrabold tracking-tight text-white">APC CORE</div>
         <div class="text-[10px] tracking-[0.22em] text-cyan-300/70">AUTOMATIZACIÓN</div>
@@ -104,7 +231,7 @@
       <a href="#beneficios" class="px-3.5 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-[#111A2E]">Beneficios</a>
       <a href="#publico" class="px-3.5 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-[#111A2E]">Público</a>
       <a href="#contacto" class="px-3.5 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-[#111A2E]">Contacto</a>
-      <a href="https://wa.me/573337450634" target="_blank" class="ml-2 px-4 py-2 rounded-xl bg-cyan-400 text-[#080C18] text-sm font-semibold hover:bg-cyan-300 shadow shadow-cyan-500/20">Cotizar</a>
+      <a href="https://wa.me/573337450634" target="_blank" rel="noopener" class="ml-2 px-4 py-2 rounded-xl bg-cyan-400 text-[#080C18] text-sm font-semibold hover:bg-cyan-300 shadow shadow-cyan-500/20">Cotizar</a>
     </nav>
     <button id="mb" class="md:hidden size-10 grid place-items-center rounded-xl bg-[#111A2E] border border-[#1E2A4A]"><i data-lucide="menu" class="w-5 h-5 text-slate-300"></i></button>
   </div>
@@ -114,7 +241,7 @@
     <a href="#beneficios" class="block px-3 py-2.5 rounded-lg hover:bg-[#111A2E]">Beneficios</a>
     <a href="#publico" class="block px-3 py-2.5 rounded-lg hover:bg-[#111A2E]">Público Objetivo</a>
     <a href="#contacto" class="block px-3 py-2.5 rounded-lg hover:bg-[#111A2E]">Contacto</a>
-    <a href="https://wa.me/573337450634" target="_blank" class="block mt-2 text-center px-4 py-3 rounded-xl bg-cyan-400 text-black font-semibold">Cotizar</a>
+    <a href="https://wa.me/573337450634" target="_blank" rel="noopener" class="block mt-2 text-center px-4 py-3 rounded-xl bg-cyan-400 text-black font-semibold">Cotizar</a>
   </div>
 </header>
 
@@ -127,11 +254,11 @@
   <div class="relative mx-auto max-w-7xl px-6 py-20 w-full grid lg:grid-cols-2 gap-14 items-center">
     <div>
       <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#111A2E] border border-[#1E2A4A] text-[11px] tracking-widest text-cyan-300"><span class="size-1.5 rounded-full bg-emerald-400 animate-pulse"></span> WHATSAPP • n8n • AUTOMATIZACIÓN</div>
-      <h1 class="mt-6 text-[38px] sm:text-6xl font-black leading-[0.9] tracking-tight text-white">APC CORE Bogotá —<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-violet-400">Automatización de WhatsApp</span><br>para negocios en Bogotá</h1>
+      <h1 class="mt-6 text-[38px] sm:text-6xl font-black leading-[0.9] tracking-tight text-white">APC CORE Bogotá<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-violet-400">Automatización de WhatsApp</span><br>para negocios en Bogotá</h1>
       <p class="mt-6 text-[18px] leading-relaxed text-slate-400 max-w-xl"><b class="text-slate-100 font-semibold">WhatsApp automation + n8n + infraestructura.</b> Captación, recordatorios, bots con IA y flujos de datos para clínicas, consultorios, pymes y flotas en Bogotá.</p>
       <div class="mt-8 flex flex-wrap gap-3">
         <a href="#servicios" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-cyan-400 text-[#080C18] font-semibold hover:bg-cyan-300 shadow-lg shadow-cyan-500/20"><i data-lucide="layers" class="w-4 h-4"></i> Ver servicios</a>
-        <a href="https://wa.me/573337450634" target="_blank" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#111A2E] border border-[#1E2A4A] hover:bg-[#162040] text-white font-medium"><i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp</a>
+        <a href="https://wa.me/573337450634" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#111A2E] border border-[#1E2A4A] hover:bg-[#162040] text-white font-medium"><i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp</a>
       </div>
       <div class="mt-10 grid grid-cols-3 gap-3 max-w-md text-[12px]">
         <div class="p-3 rounded-xl bg-[#111A2E] border border-[#1E2A4A]"><div class="text-slate-400">WhatsApp</div><div class="font-mono font-bold text-cyan-300">&lt; 30seg</div></div>
@@ -171,7 +298,7 @@
     <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
       <article class="rounded-[20px] border border-[#1E2A4A] bg-[#111A2E] p-6 hover:border-cyan-400/30 hover:-translate-y-1 transition-all">
-        <img src="imagenes/Soporte Técnico Remot.webp" alt="Soporte técnico remoto APC CORE" class="card-img" loading="lazy">
+        <img src="imagenes/Soporte Técnico Remot.webp" alt="Soporte técnico remoto APC CORE" class="card-img" loading="lazy" width="760" height="570">
         <div class="flex justify-between"><span class="px-2.5 py-1 rounded-full bg-[#0B1220] border border-[#1E2A4A] text-[11px] mono text-cyan-300">APC-SR01</span><span class="text-[11px] px-2.5 py-1 rounded-full bg-[#0B1220] border border-[#1E2A4A] text-slate-400">Por evento / Mensual</span></div>
         <h3 class="mt-4 font-bold text-lg text-white">Soporte Técnico Remoto</h3>
         <div class="mt-1 text-2xl font-black text-cyan-300">$80.000 <span class="text-xs font-medium text-slate-500">COP</span></div>
@@ -180,7 +307,7 @@
       </article>
 
       <article class="rounded-[20px] border border-[#1E2A4A] bg-[#111A2E] p-6 hover:border-cyan-400/30 hover:-translate-y-1 transition-all">
-        <img src="imagenes/manos-tecnico.webp" alt="Soporte técnico físico APC CORE" class="card-img" loading="lazy">
+        <img src="imagenes/manos-tecnico.webp" alt="Soporte técnico físico APC CORE" class="card-img" loading="lazy" width="760" height="570">
         <div class="flex justify-between"><span class="px-2.5 py-1 rounded-full bg-[#0B1220] border border-[#1E2A4A] text-[11px] mono text-cyan-300">APC-SF02</span><span class="text-[11px] px-2.5 py-1 rounded-full bg-[#0B1220] border border-[#1E2A4A] text-slate-400">Por visita</span></div>
         <h3 class="mt-4 font-bold text-lg text-white">Soporte Técnico Físico</h3>
         <div class="mt-1 text-2xl font-black text-cyan-300">$180.000 <span class="text-xs font-medium text-slate-500">COP / visita</span></div>
@@ -189,7 +316,7 @@
       </article>
 
       <article class="rounded-[20px] border border-cyan-400/30 bg-gradient-to-b from-cyan-950/20 to-[#111A2E] p-6 shadow-[0_0_0_1px_rgba(34,211,238,0.08)] hover:-translate-y-1 transition-all">
-        <img src="imagenes/control-acceso.webp" alt="Control de acceso biométrico APC CORE" class="card-img" loading="lazy">
+        <img src="imagenes/control-acceso.webp" alt="Control de acceso biométrico APC CORE" class="card-img" loading="lazy" width="760" height="570">
         <div class="flex justify-between"><span class="px-2.5 py-1 rounded-full bg-cyan-400 text-black text-[11px] mono font-bold">APC-CTRL-03</span><span class="text-[11px] px-2.5 py-1 rounded-full bg-[#0B1220] border border-cyan-400/20 text-cyan-300">Licencia + Instalación</span></div>
         <h3 class="mt-4 font-bold text-lg text-white">Control de Acceso + Nómina</h3>
         <div class="mt-1 text-2xl font-black text-cyan-300">$450.000 <span class="text-xs font-medium text-slate-400">/mes + $890k setup</span></div>
@@ -199,7 +326,7 @@
       </article>
 
       <article class="rounded-[20px] border border-[#1E2A4A] bg-[#111A2E] p-6 hover:border-cyan-400/30 hover:-translate-y-1 transition-all">
-        <img src="imagenes/GPS Flotas y Telemetría.webp" alt="GPS flotas y telemetría APC CORE" class="card-img" loading="lazy">
+        <img src="imagenes/GPS Flotas y Telemetría.webp" alt="GPS flotas y telemetría APC CORE" class="card-img" loading="lazy" width="760" height="570">
         <div class="flex justify-between"><span class="px-2.5 py-1 rounded-full bg-[#0B1220] border border-[#1E2A4A] text-[11px] mono text-cyan-300">APC-GPS-04</span><span class="text-[11px] px-2.5 py-1 rounded-full bg-[#0B1220] border border-[#1E2A4A] text-slate-400">Por vehículo/mes</span></div>
         <h3 class="mt-4 font-bold text-lg text-white">GPS Flotas y Telemetría</h3>
         <div class="mt-1 text-2xl font-black text-cyan-300">$35.000 <span class="text-xs font-medium text-slate-500">COP / veh</span></div>
@@ -208,7 +335,7 @@
       </article>
 
       <article class="rounded-[20px] border border-[#1E2A4A] bg-[#111A2E] p-6 hover:border-cyan-400/30 hover:-translate-y-1 transition-all">
-        <img src="imagenes/ia-whatsapp.webp" alt="Automatización WhatsApp con IA — bots y respuestas automáticas en Bogotá" class="card-img" loading="lazy">
+        <img src="imagenes/ia-whatsapp.webp" alt="Automatización WhatsApp con IA — bots y respuestas automáticas en Bogotá" class="card-img" loading="lazy" width="760" height="570">
         <div class="flex justify-between"><span class="px-2.5 py-1 rounded-full bg-[#0B1220] border border-[#1E2A4A] text-[11px] mono text-violet-300">APC-AUTO-05</span><span class="text-[11px] px-2.5 py-1 rounded-full bg-[#0B1220] border border-[#1E2A4A] text-slate-400">Setup + mensual</span></div>
         <h3 class="mt-4 font-bold text-lg text-white">Automatización WhatsApp + Captación</h3>
         <div class="mt-1 text-2xl font-black text-white">$590k <span class="text-xs font-medium text-slate-400">setup + $290k/mes</span></div>
@@ -217,7 +344,7 @@
       </article>
 
       <article class="rounded-[20px] border border-[#1E2A4A] bg-[#111A2E] p-6 hover:border-cyan-400/30 hover:-translate-y-1 transition-all">
-        <img src="imagenes/Flujos de Datos - Integraciones.webp" alt="Flujos de datos e integraciones APC CORE" class="card-img" loading="lazy">
+        <img src="imagenes/Flujos de Datos - Integraciones.webp" alt="Flujos de datos e integraciones APC CORE" class="card-img" loading="lazy" width="760" height="570">
         <div class="flex justify-between"><span class="px-2.5 py-1 rounded-full bg-[#0B1220] border border-[#1E2A4A] text-[11px] mono text-violet-300">APC-DATA-06</span><span class="text-[11px] px-2.5 py-1 rounded-full bg-[#0B1220] border border-[#1E2A4A] text-slate-400">Por flujo</span></div>
         <h3 class="mt-4 font-bold text-lg text-white">Flujos de Datos / Integraciones</h3>
         <div class="mt-1 text-2xl font-black text-violet-300">$250.000 <span class="text-xs font-medium text-slate-500">COP / flujo</span></div>
@@ -260,7 +387,7 @@
         </div>
       </div>
       <div class="relative">
-        <img src="imagenes/area-servicio.webp" alt="Cobertura de servicio APC CORE en Bogotá — clínicas, consultorios, pymes y flotas" class="rounded-[20px] border border-[#1E2A4A] shadow-2xl" loading="lazy">
+        <img src="imagenes/area-servicio.webp" alt="Cobertura de servicio APC CORE en Bogotá — clínicas, consultorios, pymes y flotas" class="rounded-[20px] border border-[#1E2A4A] shadow-2xl" loading="lazy" width="1140" height="855">
         <div class="absolute -bottom-4 -left-4 w-full h-full rounded-[20px] border border-cyan-400/20 -z-10"></div>
       </div>
     </div>
@@ -284,21 +411,21 @@
           <div class="flex gap-3"><i data-lucide="phone" class="w-4 h-4 text-cyan-300 mt-0.5 shrink-0"></i> <a href="tel:+573337450634" class="hover:text-cyan-300">+57 333 7450634</a></div>
         </div>
         <div class="mt-6 flex flex-wrap gap-2 text-[11px] mono"><span class="px-2 py-1 rounded-full bg-[#0B1220] border border-[#1E2A4A] text-slate-400">FastAPI :5680</span><span class="px-2 py-1 rounded-full bg-[#0B1220] border border-[#1E2A4A] text-cyan-300">n8n :5678</span><span class="px-2 py-1 rounded-full bg-[#0B1220] border border-[#1E2A4A] text-violet-300">Groq LLaMA 3.3</span></div>
-        <a href="https://maps.google.com/?cid=2641799837031184085" target="_blank" class="mt-5 inline-flex items-center gap-2 text-[13px] text-cyan-300 hover:text-cyan-200 font-medium transition-colors"><i data-lucide="map-pinned" class="w-4 h-4"></i> Ver en Google Maps</a>
+        <a href="https://maps.google.com/?cid=2641799837031184085" target="_blank" rel="noopener" class="mt-5 inline-flex items-center gap-2 text-[13px] text-cyan-300 hover:text-cyan-200 font-medium transition-colors"><i data-lucide="map-pinned" class="w-4 h-4"></i> Ver en Google Maps</a>
       </div>
       <div class="rounded-2xl border border-[#1E2A4A] bg-[#111A2E] p-8">
         <h4 class="font-semibold text-white text-lg">Síguenos</h4>
         <p class="mt-2 text-sm text-slate-400">Conoce más sobre nuestros proyectos y soluciones.</p>
         <div class="mt-6 flex flex-col gap-4">
-          <a href="https://www.facebook.com/alejandropiraquiveapc" target="_blank" class="flex items-center gap-4 p-4 rounded-xl bg-[#0B1220] border border-[#1E2A4A] hover:border-blue-500/40 transition-all group">
+          <a href="https://www.facebook.com/alejandropiraquiveapc" target="_blank" rel="noopener" class="flex items-center gap-4 p-4 rounded-xl bg-[#0B1220] border border-[#1E2A4A] hover:border-blue-500/40 transition-all group">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-blue-400"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
             <div><div class="text-sm font-medium text-white group-hover:text-blue-300">Facebook</div><div class="text-[11px] text-slate-500">@alejandropiraquiveapc</div></div>
           </a>
-          <a href="https://www.instagram.com/serviciosapc" target="_blank" class="flex items-center gap-4 p-4 rounded-xl bg-[#0B1220] border border-[#1E2A4A] hover:border-pink-500/40 transition-all group">
+          <a href="https://www.instagram.com/serviciosapc" target="_blank" rel="noopener" class="flex items-center gap-4 p-4 rounded-xl bg-[#0B1220] border border-[#1E2A4A] hover:border-pink-500/40 transition-all group">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-pink-400"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
             <div><div class="text-sm font-medium text-white group-hover:text-pink-300">Instagram</div><div class="text-[11px] text-slate-500">@serviciosapc</div></div>
           </a>
-          <a href="https://wa.me/573337450634" target="_blank" class="flex items-center gap-4 p-4 rounded-xl bg-[#0B1220] border border-[#1E2A4A] hover:border-emerald-500/40 transition-all group">
+          <a href="https://wa.me/573337450634" target="_blank" rel="noopener" class="flex items-center gap-4 p-4 rounded-xl bg-[#0B1220] border border-[#1E2A4A] hover:border-emerald-500/40 transition-all group">
             <i data-lucide="message-circle" class="w-6 h-6 text-emerald-400"></i>
             <div><div class="text-sm font-medium text-white group-hover:text-emerald-300">WhatsApp</div><div class="text-[11px] text-slate-500">+57 333 7450634</div></div>
           </a>
@@ -325,12 +452,12 @@
   <div class="mx-auto max-w-7xl px-6">
     <div class="flex flex-col md:flex-row justify-between gap-4 text-[12px] text-slate-500">
       <div>© 2026 APC CORE — Todos los derechos reservados.</div>
-      <div>Infraestructura • Automatización • Datos — <span class="text-cyan-300">Servicios APC</span></div>
+      <div>Infraestructura • Automatización • Datos — <span class="text-cyan-300">Servicios APC</span> · <a href="#contacto" data-consent-open class="hover:text-cyan-300">Privacidad y cookies</a></div>
     </div>
     <div class="mt-6 flex justify-center md:justify-end gap-4">
-      <a href="https://www.facebook.com/alejandropiraquiveapc" target="_blank" class="size-9 rounded-xl bg-[#111A2E] border border-[#1E2A4A] grid place-items-center hover:bg-blue-950/40 hover:border-blue-500/40 transition-all group"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 text-slate-400 group-hover:text-blue-400"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
-      <a href="https://www.instagram.com/serviciosapc" target="_blank" class="size-9 rounded-xl bg-[#111A2E] border border-[#1E2A4A] grid place-items-center hover:bg-pink-950/40 hover:border-pink-500/40 transition-all group"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 text-slate-400 group-hover:text-pink-400"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
-      <a href="https://wa.me/573337450634" target="_blank" class="size-9 rounded-xl bg-[#111A2E] border border-[#1E2A4A] grid place-items-center hover:bg-emerald-950/40 hover:border-emerald-500/40 transition-all group"><i data-lucide="message-circle" class="w-4 h-4 text-slate-400 group-hover:text-emerald-400"></i></a>
+      <a href="https://www.facebook.com/alejandropiraquiveapc" target="_blank" rel="noopener" class="size-9 rounded-xl bg-[#111A2E] border border-[#1E2A4A] grid place-items-center hover:bg-blue-950/40 hover:border-blue-500/40 transition-all group"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 text-slate-400 group-hover:text-blue-400"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+      <a href="https://www.instagram.com/serviciosapc" target="_blank" rel="noopener" class="size-9 rounded-xl bg-[#111A2E] border border-[#1E2A4A] grid place-items-center hover:bg-pink-950/40 hover:border-pink-500/40 transition-all group"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 text-slate-400 group-hover:text-pink-400"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+      <a href="https://wa.me/573337450634" target="_blank" rel="noopener" class="size-9 rounded-xl bg-[#111A2E] border border-[#1E2A4A] grid place-items-center hover:bg-emerald-950/40 hover:border-emerald-500/40 transition-all group"><i data-lucide="message-circle" class="w-4 h-4 text-slate-400 group-hover:text-emerald-400"></i></a>
     </div>
   </div>
 </footer>
