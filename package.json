@@ -1,13 +1,1 @@
-﻿{
-  "name": "apccore-site",
-  "private": true,
-  "version": "1.0.0",
-  "scripts": {
-    "build:css": "tailwindcss -i tailwind.input.css -o tailwind.build.css --minify",
-    "watch:css": "tailwindcss -i tailwind.input.css -o tailwind.build.css --watch"
-  },
-  "devDependencies": {
-    "@tailwindcss/cli": "^4.1.12",
-    "tailwindcss": "^4.1.12"
-  }
-}
+{"name":"apccore-site","private":true,"version":"1.0.0","scripts":{"build:css":"tailwindcss -i tailwind.input.css -o tailwind.build.css --minify"},"devDependencies":{"@tailwindcss/cli":"^4.1.12","tailwindcss":"^4.1.12"}}
