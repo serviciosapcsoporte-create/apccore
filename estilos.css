@@ -1,6 +1,7 @@
 :root {
   color-scheme: dark;
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
   --dur-1: 150ms;
   --dur-2: 200ms;
   --dur-3: 300ms;
@@ -34,7 +35,7 @@ body {
    so this adds a real scale pulse (inline elements ignore transform). */
 body span.animate-pulse {
   display: inline-block;
-  animation: live-pulse var(--dur-pulse) ease-in-out infinite;
+  animation: live-pulse var(--dur-pulse) var(--ease-in-out) infinite;
 }
 @keyframes live-pulse {
   0%, 100% { opacity: 1; transform: scale(1); }
@@ -200,7 +201,7 @@ html.js-menu #mm.is-open {
   #hero .mono > div:nth-child(3) { animation-delay: 80ms; }
   #hero .mono > div:nth-child(4) { animation-delay: 120ms; }
   #hero .mono > div:nth-child(5) { animation-delay: 160ms; }
-  #hero .mono > div:nth-child(6) { animation-delay: var(--dur-2); }
+  #hero .mono > div:nth-child(6) { animation-delay: 200ms; }
   #hero .mono > div:nth-child(7) { animation-delay: 240ms; }
   #hero .mono > div:nth-child(8) { animation-delay: 280ms; }
 
