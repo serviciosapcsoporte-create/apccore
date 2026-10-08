@@ -1,6 +1,11 @@
 :root {
   color-scheme: dark;
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --dur-1: 150ms;
+  --dur-2: 200ms;
+  --dur-3: 300ms;
+  --dur-4: 400ms;
+  --dur-pulse: 2400ms;
 }
 
 body {
@@ -29,7 +34,7 @@ body {
    so this adds a real scale pulse (inline elements ignore transform). */
 body span.animate-pulse {
   display: inline-block;
-  animation: live-pulse 2.4s var(--ease-out) infinite;
+  animation: live-pulse var(--dur-pulse) ease-in-out infinite;
 }
 @keyframes live-pulse {
   0%, 100% { opacity: 1; transform: scale(1); }
@@ -60,11 +65,12 @@ header nav a[class],
 #contacto a[href^="mailto"],
 #contacto a[href^="tel:"],
 #contacto a[href*="maps.google.com"],
-a.transition-all,
-article.transition-all,
+a.apc-link,
+article.apc-card,
+a.inline-flex,
 #mm a {
   transition-property: transform, opacity, background-color, border-color, color, box-shadow;
-  transition-duration: 150ms;
+  transition-duration: var(--dur-1);
   transition-timing-function: var(--ease-out);
 }
 
@@ -75,8 +81,9 @@ header nav a[class]:active,
 #contacto a[href^="mailto"]:active,
 #contacto a[href^="tel:"]:active,
 #contacto a[href*="maps.google.com"]:active,
-a.transition-all:active,
-article.transition-all:active,
+a.apc-link:active,
+article.apc-card:active,
+a.inline-flex:active,
 #mm a:active {
   transform: scale(0.97);
 }
@@ -96,23 +103,25 @@ article.transition-all:active,
   box-shadow: 0 8px 32px rgba(16, 185, 129, 0.3);
 }
 
-.whatsapp-float:hover {
-  background: #34d399;
-  transform: scale(1.05);
-  box-shadow: 0 12px 40px rgba(16, 185, 129, 0.4);
+@media (hover: hover) and (pointer: fine) {
+  .whatsapp-float:hover {
+    background: #34d399;
+    transform: scale(1.05);
+    box-shadow: 0 12px 40px rgba(16, 185, 129, 0.4);
+  }
 }
 
 /* Service cards: keep the lift, but only for real pointers. Touch fires
    :hover on tap and never clears it, which left cards stuck 4px up. */
-article.transition-all:hover {
+article.apc-card:hover {
   translate: none;
 }
 
 @media (hover: hover) and (pointer: fine) {
-  article.transition-all:hover {
+  article.apc-card:hover {
     transform: translateY(-4px);
   }
-  article.transition-all:hover:active {
+  article.apc-card:hover:active {
     transform: translateY(-4px) scale(0.99);
   }
 }
@@ -136,7 +145,11 @@ article.transition-all:hover {
    Mobile menu — accordion/collapse.
    `html.js-menu` (added by main.js) lets these rules override the markup's own
    `.hidden`; without JS the class keeps working exactly as before.
-   Stays in flow, so the page below never shifts.
+    Stays in flow, so the page below never shifts.
+    Trade-off documentado: max-height anima layout en cada frame. Usarlo es
+    aceptable para un accordion movil poco frecuente; la alternativa
+    grid-template-rows 0fr->1fr evita layout pero exige envolver los hijos
+    en un wrapper extra. No se justifica ese markup aqui.
    --------------------------------------------------------------------------- */
 html.js-menu #mm {
   display: block;
@@ -149,11 +162,11 @@ html.js-menu #mm {
   opacity: 0;
   translate: 0 -8px;
   transition:
-    max-height 140ms var(--ease-out),
-    padding-top 140ms var(--ease-out),
-    padding-bottom 140ms var(--ease-out),
-    opacity 140ms var(--ease-out),
-    translate 140ms var(--ease-out);
+    max-height var(--dur-1) var(--ease-out),
+    padding-top var(--dur-1) var(--ease-out),
+    padding-bottom var(--dur-1) var(--ease-out),
+    opacity var(--dur-1) var(--ease-out),
+    translate var(--dur-1) var(--ease-out);
 }
 
 html.js-menu #mm.is-open {
@@ -163,7 +176,7 @@ html.js-menu #mm.is-open {
   border-top-width: 1px;
   opacity: 1;
   translate: 0 0;
-  transition-duration: 200ms;
+  transition-duration: var(--dur-2);
   transition-timing-function: var(--ease-out);
 }
 
@@ -180,24 +193,24 @@ html.js-menu #mm.is-open {
    --------------------------------------------------------------------------- */
 @media (prefers-reduced-motion: no-preference) {
   #hero .mono > div {
-    animation: line-in 200ms var(--ease-out) both;
+    animation: line-in var(--dur-2) var(--ease-out) both;
   }
   #hero .mono > div:nth-child(1) { animation-delay: 0ms; }
   #hero .mono > div:nth-child(2) { animation-delay: 40ms; }
   #hero .mono > div:nth-child(3) { animation-delay: 80ms; }
   #hero .mono > div:nth-child(4) { animation-delay: 120ms; }
   #hero .mono > div:nth-child(5) { animation-delay: 160ms; }
-  #hero .mono > div:nth-child(6) { animation-delay: 200ms; }
+  #hero .mono > div:nth-child(6) { animation-delay: var(--dur-2); }
   #hero .mono > div:nth-child(7) { animation-delay: 240ms; }
   #hero .mono > div:nth-child(8) { animation-delay: 280ms; }
 
   #hero .mono .overflow-hidden > div {
-    animation: bar-reveal 400ms var(--ease-out) both;
+    animation: bar-reveal var(--dur-4) var(--ease-out) both;
     animation-delay: 480ms;
   }
 
   #servicios article.in {
-    animation: card-in 300ms var(--ease-out) both;
+    animation: card-in var(--dur-3) var(--ease-out) both;
   }
 }
 
@@ -237,7 +250,7 @@ html.js-menu #mm.is-open {
   display: none;
 }
 #consentBanner:not([hidden]) {
-  animation: consent-in 200ms var(--ease-out) both;
+  animation: consent-in var(--dur-2) var(--ease-out) both;
 }
 @keyframes consent-in {
   from { opacity: 0; transform: translateY(8px); }
@@ -267,9 +280,9 @@ html.js-menu #mm.is-open {
   font-weight: 600;
   cursor: pointer;
   transition:
-    transform 140ms var(--ease-out),
-    background-color 140ms var(--ease-out),
-    border-color 140ms var(--ease-out);
+    transform var(--dur-1) var(--ease-out),
+    background-color var(--dur-1) var(--ease-out),
+    border-color var(--dur-1) var(--ease-out);
 }
 .consent-btn--primary {
   background: #22D3EE;
@@ -309,8 +322,8 @@ html.js-menu #mm.is-open {
     transform: none;
   }
 
-  article.transition-all:hover,
-  article.transition-all:hover:active {
+  article.apc-card:hover,
+  article.apc-card:hover:active {
     transform: none;
   }
 
@@ -322,10 +335,20 @@ html.js-menu #mm.is-open {
   #contacto a[href^="mailto"]:active,
   #contacto a[href^="tel:"]:active,
   #contacto a[href*="maps.google.com"]:active,
-  a.transition-all:active,
-  article.transition-all:active,
+  a.apc-link:active,
+  article.apc-card:active,
+  a.inline-flex:active,
   #mm a:active {
     transform: none;
     opacity: 0.85;
   }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  #landing-hero > div > * {
+    animation: line-in var(--dur-2) var(--ease-out) both;
+  }
+  #landing-hero > div > *:nth-child(2) { animation-delay: 60ms; }
+  #landing-hero > div > *:nth-child(3) { animation-delay: 120ms; }
+  #landing-hero > div > *:nth-child(4) { animation-delay: 180ms; }
 }
